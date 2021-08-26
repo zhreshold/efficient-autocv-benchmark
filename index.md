@@ -16,13 +16,35 @@ Exploring the optimal hyper-parameters of a deep neural network is a difficult a
 
 ![Public datasets](assets/images/public_datasets.png "public datasets")
 
-![Private datasets](assets/images/private_datasets.png "private datasets")
 
+## Download meta-dataset
 
-## How to download
+### Prerequisites
+
+You need a python environment to download all datasets. Make sure you have installed `python>=3.6`, `pip`, please refer to e.g. this [installation guide](https://realpython.com/installing-python/) if you haven't done so.
+
+Install `pandas` and `d8` packages, the easiest way to do so is to install via pip: `python -m pip install pandas d8`.
+
+### Get the script for downloading the datasets
+
+You can use [ipynb](benchmark/download_public_datasets.ipynb) or [python script](benchmark/download_public_datasets.py) to download all images at once.
+Make sure you have enough disk space(datasets in total is 40G, recommended free disk space is 100G) and set `ROOT` folder in these script properly before downloading.
+
+Be patient during download and you should run the script in the background thread because it might take longer when internet connection is slow.
+
+### Download the train/test splits for each dataset
+
+You can download the splits from this [zip](benchmark/efficient_autocv_splits.zip) file.
 
 
 ## Metrics
+
+We use normalized Mean Accuracy(m-acc) and Mean Average Precision(mAP) for image classification and object detection tasks follow the conventions, respectively.
+
+For overall score for the entire meta-dataset benchmark, we follow the ALC scoring function introduced in [AutoDL challenges](https://autodl.chalearn.org/), with modified time step normalization function. More specifically, ALC is calculated with formulation:
+
+![alc](assets/images/alc.png)
+
 
 ## Appendix
 
@@ -30,3 +52,14 @@ Visualization of sample images:
 
 ![example](assets/images/viz/file-10.png)
 ![example](assets/images/viz/file-11.png)
+![example](assets/images/viz/file-12.png)
+![example](assets/images/viz/file-13.png)
+![example](assets/images/viz/file-14.png)
+![example](assets/images/viz/file-15.png)
+![example](assets/images/viz/file-16.png)
+![example](assets/images/viz/file-17.png)
+![example](assets/images/viz/file-18.png)
+![example](assets/images/viz/file-19.png)
+![example](assets/images/viz/file-20.png)
+![example](assets/images/viz/file-21.png)
+![example](assets/images/viz/file-22.png)
