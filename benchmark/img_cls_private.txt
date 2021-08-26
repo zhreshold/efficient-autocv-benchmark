@@ -1,0 +1,6 @@
+chessman
+rice-diseases
+mushrooms
+oregon-wildlife
+eurosat
+deep-weeds

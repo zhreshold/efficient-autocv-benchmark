@@ -1,0 +1,7 @@
+chess
+raccoon
+car-license-plates
+hands
+pets
+cars-and-traffic-signs
+stanford-dogs
